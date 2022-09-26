@@ -7,23 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E5F3E64728E22AF900C14041 /* DaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3E64628E22AF900C14041 /* DaysApp.swift */; };
-		E5F3E64928E22AF900C14041 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3E64828E22AF900C14041 /* ContentView.swift */; };
-		E5F3E64B28E22AFA00C14041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F3E64A28E22AFA00C14041 /* Assets.xcassets */; };
-		E5F3E64E28E22AFA00C14041 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F3E64D28E22AFA00C14041 /* Preview Assets.xcassets */; };
+		E5F3E66228E22B5600C14041 /* DaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3E66128E22B5600C14041 /* DaysApp.swift */; };
+		E5F3E66428E22B5600C14041 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3E66328E22B5600C14041 /* ContentView.swift */; };
+		E5F3E66628E22B5700C14041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F3E66528E22B5700C14041 /* Assets.xcassets */; };
+		E5F3E66928E22B5700C14041 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F3E66828E22B5700C14041 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E5F3E64328E22AF900C14041 /* Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5F3E64628E22AF900C14041 /* DaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysApp.swift; sourceTree = "<group>"; };
-		E5F3E64828E22AF900C14041 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E5F3E64A28E22AFA00C14041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E5F3E64D28E22AFA00C14041 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E5F3E64F28E22AFA00C14041 /* Days.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Days.entitlements; sourceTree = "<group>"; };
+		E5F3E65E28E22B5600C14041 /* Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5F3E66128E22B5600C14041 /* DaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysApp.swift; sourceTree = "<group>"; };
+		E5F3E66328E22B5600C14041 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E5F3E66528E22B5700C14041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E5F3E66828E22B5700C14041 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E5F3E64028E22AF900C14041 /* Frameworks */ = {
+		E5F3E65B28E22B5600C14041 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,38 +32,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E5F3E63A28E22AF900C14041 = {
+		E5F3E65528E22B5600C14041 = {
 			isa = PBXGroup;
 			children = (
-				E5F3E64528E22AF900C14041 /* Days */,
-				E5F3E64428E22AF900C14041 /* Products */,
+				E5F3E66028E22B5600C14041 /* Days */,
+				E5F3E65F28E22B5600C14041 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E5F3E64428E22AF900C14041 /* Products */ = {
+		E5F3E65F28E22B5600C14041 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E5F3E64328E22AF900C14041 /* Days.app */,
+				E5F3E65E28E22B5600C14041 /* Days.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E5F3E64528E22AF900C14041 /* Days */ = {
+		E5F3E66028E22B5600C14041 /* Days */ = {
 			isa = PBXGroup;
 			children = (
-				E5F3E64628E22AF900C14041 /* DaysApp.swift */,
-				E5F3E64828E22AF900C14041 /* ContentView.swift */,
-				E5F3E64A28E22AFA00C14041 /* Assets.xcassets */,
-				E5F3E64F28E22AFA00C14041 /* Days.entitlements */,
-				E5F3E64C28E22AFA00C14041 /* Preview Content */,
+				E5F3E66128E22B5600C14041 /* DaysApp.swift */,
+				E5F3E66328E22B5600C14041 /* ContentView.swift */,
+				E5F3E66528E22B5700C14041 /* Assets.xcassets */,
+				E5F3E66728E22B5700C14041 /* Preview Content */,
 			);
 			path = Days;
 			sourceTree = "<group>";
 		};
-		E5F3E64C28E22AFA00C14041 /* Preview Content */ = {
+		E5F3E66728E22B5700C14041 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				E5F3E64D28E22AFA00C14041 /* Preview Assets.xcassets */,
+				E5F3E66828E22B5700C14041 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -72,13 +70,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E5F3E64228E22AF900C14041 /* Days */ = {
+		E5F3E65D28E22B5600C14041 /* Days */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E5F3E65228E22AFA00C14041 /* Build configuration list for PBXNativeTarget "Days" */;
+			buildConfigurationList = E5F3E66C28E22B5700C14041 /* Build configuration list for PBXNativeTarget "Days" */;
 			buildPhases = (
-				E5F3E63F28E22AF900C14041 /* Sources */,
-				E5F3E64028E22AF900C14041 /* Frameworks */,
-				E5F3E64128E22AF900C14041 /* Resources */,
+				E5F3E65A28E22B5600C14041 /* Sources */,
+				E5F3E65B28E22B5600C14041 /* Frameworks */,
+				E5F3E65C28E22B5600C14041 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -86,25 +84,25 @@
 			);
 			name = Days;
 			productName = Days;
-			productReference = E5F3E64328E22AF900C14041 /* Days.app */;
+			productReference = E5F3E65E28E22B5600C14041 /* Days.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E5F3E63B28E22AF900C14041 /* Project object */ = {
+		E5F3E65628E22B5600C14041 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					E5F3E64228E22AF900C14041 = {
+					E5F3E65D28E22B5600C14041 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = E5F3E63E28E22AF900C14041 /* Build configuration list for PBXProject "Days" */;
+			buildConfigurationList = E5F3E65928E22B5600C14041 /* Build configuration list for PBXProject "Days" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,42 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = E5F3E63A28E22AF900C14041;
-			productRefGroup = E5F3E64428E22AF900C14041 /* Products */;
+			mainGroup = E5F3E65528E22B5600C14041;
+			productRefGroup = E5F3E65F28E22B5600C14041 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E5F3E64228E22AF900C14041 /* Days */,
+				E5F3E65D28E22B5600C14041 /* Days */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E5F3E64128E22AF900C14041 /* Resources */ = {
+		E5F3E65C28E22B5600C14041 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5F3E64E28E22AFA00C14041 /* Preview Assets.xcassets in Resources */,
-				E5F3E64B28E22AFA00C14041 /* Assets.xcassets in Resources */,
+				E5F3E66928E22B5700C14041 /* Preview Assets.xcassets in Resources */,
+				E5F3E66628E22B5700C14041 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E5F3E63F28E22AF900C14041 /* Sources */ = {
+		E5F3E65A28E22B5600C14041 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5F3E64928E22AF900C14041 /* ContentView.swift in Sources */,
-				E5F3E64728E22AF900C14041 /* DaysApp.swift in Sources */,
+				E5F3E66428E22B5600C14041 /* ContentView.swift in Sources */,
+				E5F3E66228E22B5600C14041 /* DaysApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		E5F3E65028E22AFA00C14041 /* Debug */ = {
+		E5F3E66A28E22B5700C14041 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -198,17 +196,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		E5F3E65128E22AFA00C14041 /* Release */ = {
+		E5F3E66B28E22B5700C14041 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -253,91 +251,96 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		E5F3E65328E22AFA00C14041 /* Debug */ = {
+		E5F3E66D28E22B5700C14041 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Days/Days.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Days/Preview Content\"";
 				DEVELOPMENT_TEAM = 4ZCX8DFXBW;
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pawelbrzozowski.Days;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		E5F3E65428E22AFA00C14041 /* Release */ = {
+		E5F3E66E28E22B5700C14041 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Days/Days.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Days/Preview Content\"";
 				DEVELOPMENT_TEAM = 4ZCX8DFXBW;
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pawelbrzozowski.Days;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E5F3E63E28E22AF900C14041 /* Build configuration list for PBXProject "Days" */ = {
+		E5F3E65928E22B5600C14041 /* Build configuration list for PBXProject "Days" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E5F3E65028E22AFA00C14041 /* Debug */,
-				E5F3E65128E22AFA00C14041 /* Release */,
+				E5F3E66A28E22B5700C14041 /* Debug */,
+				E5F3E66B28E22B5700C14041 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5F3E65228E22AFA00C14041 /* Build configuration list for PBXNativeTarget "Days" */ = {
+		E5F3E66C28E22B5700C14041 /* Build configuration list for PBXNativeTarget "Days" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E5F3E65328E22AFA00C14041 /* Debug */,
-				E5F3E65428E22AFA00C14041 /* Release */,
+				E5F3E66D28E22B5700C14041 /* Debug */,
+				E5F3E66E28E22B5700C14041 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E5F3E63B28E22AF900C14041 /* Project object */;
+	rootObject = E5F3E65628E22B5600C14041 /* Project object */;
 }
