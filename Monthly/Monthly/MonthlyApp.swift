@@ -1,14 +1,14 @@
 //
-//  DaysApp.swift
-//  Days
+//  MonthlyApp.swift
+//  Monthly
 //
-//  Created by Paweł Brzozowski on 26/09/2022.
+//  Created by Paweł Brzozowski on 30/09/2022.
 //
 
 import SwiftUI
 
 @main
-struct DaysApp: App {
+struct MonthlyApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
