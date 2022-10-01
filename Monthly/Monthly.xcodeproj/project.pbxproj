@@ -16,6 +16,7 @@
 		E54ADA0128E773F9009A8F3F /* MonthlyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54ADA0028E773F9009A8F3F /* MonthlyWidget.swift */; };
 		E54ADA0328E773FD009A8F3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54ADA0228E773FD009A8F3F /* Assets.xcassets */; };
 		E54ADA0728E773FD009A8F3F /* MonthlyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E54AD9F928E773F9009A8F3F /* MonthlyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E59043F328E87396008099FB /* MonthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59043F228E87396008099FB /* MonthConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		E54ADA0028E773F9009A8F3F /* MonthlyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyWidget.swift; sourceTree = "<group>"; };
 		E54ADA0228E773FD009A8F3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E54ADA0428E773FD009A8F3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E59043F228E87396008099FB /* MonthConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		E54AD9DB28E77396009A8F3F = {
 			isa = PBXGroup;
 			children = (
+				E59043F228E87396008099FB /* MonthConfig.swift */,
 				E54AD9E628E77396009A8F3F /* Monthly */,
 				E54AD9FF28E773F9009A8F3F /* MonthlyWidget */,
 				E54AD9FA28E773F9009A8F3F /* Frameworks */,
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59043F328E87396008099FB /* MonthConfig.swift in Sources */,
 				E54ADA0128E773F9009A8F3F /* MonthlyWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

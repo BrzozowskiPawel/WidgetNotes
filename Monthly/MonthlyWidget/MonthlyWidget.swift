@@ -40,25 +40,32 @@ struct DayEntry: TimelineEntry {
 
 struct MonthlyWidgetEntryView : View {
     var entry: DayEntry
+    var config: MonthConfig
+    
+    init(entry: DayEntry) {
+        self.entry = entry
+        self.config = MonthConfig.determineConfig(from: self.entry.date)
+    }
+    
     var body: some View {
         ZStack {
             ContainerRelativeShape()
-                .fill(.gray.gradient)
+                .fill(config.backgroundColor.gradient)
             VStack {
                 HStack(spacing: 4) {
-                    Text("⛄️")
+                    Text(config.emojiText)
                         .font(.title)
                     Text(entry.date.weekdayFormat)
                         .font(.title3)
                         .fontWeight(.bold)
                         .minimumScaleFactor(0.6)
-                        .foregroundColor(.black.opacity(0.6))
+                        .foregroundColor(config.weekdayTextColor.opacity(0.6))
                     Spacer()
                 }
                 
                 Text(entry.date.dayFormat)
                     .font(.system(size: 80, weight: .heavy))
-                    .foregroundColor(.white.opacity(0.8))
+                    .foregroundColor(config.dayTextColor.opacity(0.8))
                 
                 
             }
