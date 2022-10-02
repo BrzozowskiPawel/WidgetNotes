@@ -21,11 +21,18 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [RepoEntry] = []
-
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
+        Task {
+            let nextUpdate = Date().addingTimeInterval(43200) //12 hours in seconds
+            
+            do {
+                let repo = try await NetworkManager.shared.getRepo(url: RepoURL.swift)
+                let entry = RepoEntry(date: .now, repo: repo)
+                let timeline = Timeline(entries: [entry], policy: .after(nextUpdate))
+                completion(timeline)
+            } catch {
+                print("❌ failed to get data from NetworkManager: \(error.localizedDescription)")
+            }
+        }
     }
 }
 
@@ -36,7 +43,11 @@ struct RepoEntry: TimelineEntry {
 
 struct GithubRepoWidgetEntryView : View {
     var entry: RepoEntry
-
+    let formatter = ISO8601DateFormatter()
+    var daysSinceLastActivity: Int {
+        calculateDays(from: entry.repo.pushedAt)
+    }
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -54,23 +65,29 @@ struct GithubRepoWidgetEntryView : View {
                 HStack {
                     StatLabel(value: entry.repo.watchers, imageName: "star.fill")
                     StatLabel(value: entry.repo.forks, imageName: "tuningfork")
-                    StatLabel(value: entry.repo.open_issues, imageName: "exclamationmark.triangle.fill")
+                    StatLabel(value: entry.repo.openIssues, imageName: "exclamationmark.triangle.fill")
                 }
             }
             Spacer()
             VStack {
-                Text("99")
+                Text("\(daysSinceLastActivity)")
                     .fontWeight(.bold)
                     .font(.system(size: 70))
                     .frame(width: 90)
                     .minimumScaleFactor(0.6)
                     .lineLimit(1)
+                    .foregroundColor(daysSinceLastActivity > 30 ? .pink : .green)
                 Text("days ago")
                     .font(.caption2)
                     .foregroundColor(.secondary)
             }
         }
         .padding()
+    }
+    
+    func calculateDays(from dateString: String) -> Int {
+        let activityDate = formatter.date(from: dateString) ?? .now
+        return Calendar.current.dateComponents([.day], from: activityDate, to: .now).day ?? 0
     }
 }
 
@@ -104,6 +121,8 @@ fileprivate struct StatLabel: View {
         Label {
             Text("\(value)")
                 .font(.footnote)
+                .minimumScaleFactor(0.6)
+                .lineLimit(1)
         } icon: {
             Image(systemName: imageName)
                 .foregroundColor(.green)
