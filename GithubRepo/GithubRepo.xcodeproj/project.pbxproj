@@ -16,6 +16,10 @@
 		E590441A28E8A357008099FB /* GithubRepoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590441928E8A357008099FB /* GithubRepoWidget.swift */; };
 		E590441C28E8A359008099FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E590441B28E8A359008099FB /* Assets.xcassets */; };
 		E590442028E8A359008099FB /* GithubRepoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E590441228E8A357008099FB /* GithubRepoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E590442628E8BB0D008099FB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590442528E8BB0D008099FB /* Repository.swift */; };
+		E590442828E99A98008099FB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590442528E8BB0D008099FB /* Repository.swift */; };
+		E590442A28E9ADDC008099FB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590442928E9ADDC008099FB /* NetworkManager.swift */; };
+		E590442B28E9ADDC008099FB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590442928E9ADDC008099FB /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,8 @@
 		E590441928E8A357008099FB /* GithubRepoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoWidget.swift; sourceTree = "<group>"; };
 		E590441B28E8A359008099FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E590441D28E8A359008099FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E590442528E8BB0D008099FB /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		E590442928E9ADDC008099FB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,8 @@
 		E59043FF28E8A2ED008099FB /* GithubRepo */ = {
 			isa = PBXGroup;
 			children = (
+				E590442928E9ADDC008099FB /* NetworkManager.swift */,
+				E590442528E8BB0D008099FB /* Repository.swift */,
 				E590440028E8A2ED008099FB /* GithubRepoApp.swift */,
 				E590440228E8A2ED008099FB /* ContentView.swift */,
 				E590440428E8A2F1008099FB /* Assets.xcassets */,
@@ -234,8 +242,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E590442A28E9ADDC008099FB /* NetworkManager.swift in Sources */,
 				E590440328E8A2ED008099FB /* ContentView.swift in Sources */,
 				E590440128E8A2ED008099FB /* GithubRepoApp.swift in Sources */,
+				E590442628E8BB0D008099FB /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +253,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E590442B28E9ADDC008099FB /* NetworkManager.swift in Sources */,
 				E590441A28E8A357008099FB /* GithubRepoWidget.swift in Sources */,
+				E590442828E99A98008099FB /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
