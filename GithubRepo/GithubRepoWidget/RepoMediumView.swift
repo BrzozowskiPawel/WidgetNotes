@@ -64,7 +64,7 @@ struct RepoMediumView: View {
 
 struct RepoMediumView_Previews: PreviewProvider {
     static var previews: some View {
-        RepoMediumView(repo: Repository.placeholder)
+        RepoMediumView(repo: MockData.repo1)
             .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }

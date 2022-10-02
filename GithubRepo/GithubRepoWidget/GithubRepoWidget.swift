@@ -10,13 +10,16 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> RepoEntry {
-        RepoEntry(date: Date(), repo: Repository.placeholder)
+        RepoEntry(date: Date(),
+                  repo: MockData.repo1,
+                  bottomRepo: MockData.repo2)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (RepoEntry) -> ()) {
         let entry = RepoEntry(
             date: Date(),
-            repo: Repository.placeholder)
+            repo: MockData.repo1,
+            bottomRepo: MockData.repo2)
         completion(entry)
     }
 
@@ -25,10 +28,23 @@ struct Provider: TimelineProvider {
             let nextUpdate = Date().addingTimeInterval(43200) //12 hours in seconds
             
             do {
+                // Get top repo
                 var repo = try await NetworkManager.shared.getRepo(url: RepoURL.swift)
                 let avatarData = await NetworkManager.shared.getImage(from: repo.owner.avatarUrl)
                 repo.avatarData = avatarData ?? Data()
-                let entry = RepoEntry(date: .now, repo: repo)
+                
+                // Get bottom Repo (if it's large widget)
+                var bottomRepo: Repository?
+                if context.family == .systemLarge {
+                    // try await is working similar to guard let here...
+                    bottomRepo = try await NetworkManager.shared.getRepo(url: RepoURL.googleSignIn
+                    )
+                    let avatarData = await NetworkManager.shared.getImage(from: bottomRepo!.owner.avatarUrl)
+                    bottomRepo!.avatarData = avatarData ?? Data()
+                }
+                
+                // Create entry and timeline
+                let entry = RepoEntry(date: .now, repo: repo, bottomRepo: bottomRepo)
                 let timeline = Timeline(entries: [entry], policy: .after(nextUpdate))
                 completion(timeline)
             } catch {
@@ -41,6 +57,7 @@ struct Provider: TimelineProvider {
 struct RepoEntry: TimelineEntry {
     let date: Date
     let repo: Repository
+    let bottomRepo: Repository?
 }
 
 struct GithubRepoWidgetEntryView : View {
@@ -54,7 +71,9 @@ struct GithubRepoWidgetEntryView : View {
         case .systemLarge:
             VStack(spacing: 16) {
                 RepoMediumView(repo: entry.repo)
-                RepoMediumView(repo: entry.repo)
+                if let bottomRepo = entry.bottomRepo {
+                    RepoMediumView(repo: bottomRepo)
+                }
             }
             .padding()
         case .systemExtraLarge, .systemSmall, .accessoryCircular, .accessoryRectangular, .accessoryInline:
@@ -83,7 +102,8 @@ struct GithubRepoWidget_Previews: PreviewProvider {
     static var previews: some View {
         GithubRepoWidgetEntryView(entry: RepoEntry(
             date: Date(),
-            repo: Repository.placeholder))
+            repo: MockData.repo1,
+            bottomRepo: MockData.repo2))
             .previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }
