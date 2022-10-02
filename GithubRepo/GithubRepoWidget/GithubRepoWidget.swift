@@ -70,7 +70,9 @@ struct GithubRepoWidgetEntryView : View {
                 HStack {
                     StatLabel(value: entry.repo.watchers, imageName: "star.fill")
                     StatLabel(value: entry.repo.forks, imageName: "tuningfork")
-                    StatLabel(value: entry.repo.openIssues, imageName: "exclamationmark.triangle.fill")
+                    if entry.repo.hasIssues {
+                        StatLabel(value: entry.repo.openIssues, imageName: "exclamationmark.triangle.fill")
+                    }
                 }
             }
             Spacer()
