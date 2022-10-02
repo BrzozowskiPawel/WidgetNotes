@@ -10,13 +10,14 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> RepoEntry {
-        RepoEntry(date: Date(), repo: Repository.placeholder)
+        RepoEntry(date: Date(), repo: Repository.placeholder, avatarImageData: Data())
     }
 
     func getSnapshot(in context: Context, completion: @escaping (RepoEntry) -> ()) {
         let entry = RepoEntry(
             date: Date(),
-            repo: Repository.placeholder)
+            repo: Repository.placeholder,
+            avatarImageData: Data())
         completion(entry)
     }
 
@@ -26,7 +27,8 @@ struct Provider: TimelineProvider {
             
             do {
                 let repo = try await NetworkManager.shared.getRepo(url: RepoURL.swift)
-                let entry = RepoEntry(date: .now, repo: repo)
+                let avatar = await NetworkManager.shared.getImage(from: repo.owner.avatarUrl)
+                let entry = RepoEntry(date: .now, repo: repo, avatarImageData: avatar ?? Data())
                 let timeline = Timeline(entries: [entry], policy: .after(nextUpdate))
                 completion(timeline)
             } catch {
@@ -39,6 +41,7 @@ struct Provider: TimelineProvider {
 struct RepoEntry: TimelineEntry {
     let date: Date
     let repo: Repository
+    let avatarImageData: Data
 }
 
 struct GithubRepoWidgetEntryView : View {
@@ -52,8 +55,10 @@ struct GithubRepoWidgetEntryView : View {
         HStack {
             VStack(alignment: .leading) {
                 HStack {
-                    Circle()
+                    Image(uiImage: UIImage(data: entry.avatarImageData) ?? UIImage(systemName: "person.fill")!)
+                        .resizable()
                         .frame(width: 50, height: 50)
+                        .clipShape(Circle())
                     Text(entry.repo.name)
                         .font(.title2)
                         .fontWeight(.semibold)
@@ -108,7 +113,7 @@ struct GithubRepoWidget: Widget {
 struct GithubRepoWidget_Previews: PreviewProvider {
     static var previews: some View {
         GithubRepoWidgetEntryView(entry: RepoEntry(
-            date: Date(), repo: Repository.placeholder))
+            date: Date(), repo: Repository.placeholder, avatarImageData: Data()))
             .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
